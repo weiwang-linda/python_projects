@@ -1,2 +1,2 @@
 # python_projects
-Every python files include scripts, exercises, and etc.
+All of python files include scripts, exercises, and etc.
