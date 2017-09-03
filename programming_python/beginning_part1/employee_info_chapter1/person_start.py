@@ -1,4 +1,5 @@
 #person_start.py
+#Only data no method
 
 class Person:
 	def __init__(self, name, age, pay=0, job=None):
