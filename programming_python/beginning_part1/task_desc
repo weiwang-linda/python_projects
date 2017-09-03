@@ -1,0 +1,33 @@
+案例一： 记录人事信息数据库程序.
+
+概述：构建一个保存记录的数据库，并通过以下步骤进行迁移：交互式编程，命令行工具，控制台界面，GUI和简单的网页界面。将实现一个python类实例的数据库，它可以通过多种界面对其进行访问和修改。
+
+涉及概念：数据表示、对象持久化和面向对象编程。
+
+复习基础知识：
+1. 表示记录
+
+例子：
+bob -- name='Bob Smith' age=42 job='software' pay=30000
+sue -- name='Sue Jones' age=47 job='hardware' pay=50000
+
+	1) List: 传统方法，索引，切片，可变性，列表嵌套，访问，列表解析，map，生成器表达式，append, extend, Field标签，列表的列表，元组赋值。
+
+	2) 字典: 传统方式创建，关键字参数创建，一次一个字段创建，zip函数创建，一个键序列和所有键的可选初始值来创建字典.
+
+	3) 字典列表: 访问，列表解析，map表达式，生成器表达式，带条件的生成器表达式以及列表解析
+
+	4) 嵌套结构: 访问以及修改。
+
+	5) 字典的字典： 表示数据库，获取数据库字段值，修改，pprint模块用来显示数据库，字典的迭代器，迭代字典的值集合，新增记录，db.keys(),len函数，等等.
+
+2. 持久存储记录
+列表，字典这些数据结构对象都是暂时的，他们只能保存在内存中，随着我们退出python或者创建它们的python程序而烟消云散。为了使人员信息持久化，需要保存在某种类型的文件中。
+	1) 格式化文件：在程序运行时保存数据的一种方法，把所有数据以格式化的方式写入一个文本文件。只要保存和装载的工具在所选格式上达成一致。 例：initdata.py, make_db_file.py, dump_db_file.py, update_db_file.py.
+
+	2) 使用Pickle文件: Pickle模块将内存中的python对象转化为序列化的字节流，这种字节流可以写入任何类似文件对象；Pickle也可以根据序列化的字节流重新构建原来内存中的对象。这种序列化的格式具有普遍性。只要对象具有与文件兼容的接口，就可以通过pickle将内存中的python对象转化成多种媒介存储。
+	例：make_db_pickle.py, dump_db_pickle.py, update_db_pickle.py, make_db_pickle_recs.py, dump_db_pickle.recs.py, update_db_pickle_recs.py
+
+	3) 使用Shelves: 将一条记录pickle成一个文件，用键来访问记录，这是python标准库提供了一种更高层次的工具。可以自动的将对象pickle进和pickle出键访问文件系统，shelve系统自动分隔存储记录，并且只获取和更新被访问和修改的记录。shelve就像一个存储持久化对象的持久化字典。dump_db_shelve.py make_db_shelve.py update_db_shelve.py
+
+	4) OOP: 可以集中存放记录处理的逻辑。封装后可以重复使用，不像函数封装的只是处理逻辑，OOP把处理逻辑和数据库中的数据很好的结合起来。能够更加自然的方式支持扩展和自定义。在OOP中，我们通过定制（继承）来编程，而不是更改代码。	person_start.py person.py manager.py
