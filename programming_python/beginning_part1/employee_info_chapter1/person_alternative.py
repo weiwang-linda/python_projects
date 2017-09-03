@@ -29,7 +29,7 @@ class Manager(Person):
 if __name__ == '__main__':
 	bob = Person('Bob Smith', 42, 30000, 'software')
 	sue = Person('Sue Jones', 45, 40000, 'hardware')
-	tom = Manager(name="Tom Doe", age=50, pay=50000)
+	tom = Manager("Tom Doe", 50, 50000)
 	print(sue, sue.pay, sue.lastName())
 	for obj in (bob, sue, tom):
 		obj.giveRaise(0.1)
