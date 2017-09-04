@@ -31,3 +31,8 @@ sue -- name='Sue Jones' age=47 job='hardware' pay=50000
 	3) 使用Shelves: 将一条记录pickle成一个文件，用键来访问记录，这是python标准库提供了一种更高层次的工具。可以自动的将对象pickle进和pickle出键访问文件系统，shelve系统自动分隔存储记录，并且只获取和更新被访问和修改的记录。shelve就像一个存储持久化对象的持久化字典。dump_db_shelve.py make_db_shelve.py update_db_shelve.py
 
 	4) OOP: 可以集中存放记录处理的逻辑。封装后可以重复使用，不像函数封装的只是处理逻辑，OOP把处理逻辑和数据库中的数据很好的结合起来。能够更加自然的方式支持扩展和自定义。在OOP中，我们通过定制（继承）来编程，而不是更改代码。	person_start.py person.py manager.py
+
+	4. 增加控制台交互：
+	1) 基本的界面允许用户在控制台窗口中输入键和值来操作数据库（而不是写Python代码）.peopleinteract_query.py
+
+	2) 可以交互式的更新，对于输入的键，要求输入每个字段的值来更新现存的记录或者创新一个新的对象，然后保存在该键。
