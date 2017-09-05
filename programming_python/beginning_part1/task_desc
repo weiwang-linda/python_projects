@@ -36,3 +36,6 @@ sue -- name='Sue Jones' age=47 job='hardware' pay=50000
 	1) 基本的界面允许用户在控制台窗口中输入键和值来操作数据库（而不是写Python代码）.peopleinteract_query.py
 
 	2) 可以交互式的更新，对于输入的键，要求输入每个字段的值来更新现存的记录或者创新一个新的对象，然后保存在该键。
+
+	5. 增加GUI
+	
