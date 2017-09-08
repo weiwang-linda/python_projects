@@ -32,6 +32,7 @@ def urlrequest_success(url):
 	http_response = urlopen(url)
 	print(http_response.__class__.__name__)
 	if http_response.msg == 'OK' and http_response.getcode() == 200:
+	#if http_response.reason == 'OK' and http_response.status == 200:
 		print("The url is requested successfully!")
 	else:
 		print("The url is requested fail!")
@@ -46,7 +47,7 @@ def get_htmltype(url):
 
 def search_sourcecode(url):
 	try:
-		http_response = urlopen(url)
+		http_response = urlopen(url)   # return a iteral object,context manager
 	except URLError as e:
 		print(e)
 	with http_response as response:
@@ -55,9 +56,18 @@ def search_sourcecode(url):
 			if 'Sign up for GitHub' in line:
 				print(line)
 
+def download_webpage(url):
+	try:
+		http_response = urlopen(url)
+	except URLError as e:
+		print(e)
+	content = http_response.read()     #return a bytestream
+	print(content.decode(http_response.info().get_content_charset()))   # decode to string
+
 if __name__ == '__main__':
 	for url in URLS:
 		displayHeaders(url)
 		urlrequest_success(url)
 		get_htmltype(url)
 		search_sourcecode(url)
+		download_webpage(url)

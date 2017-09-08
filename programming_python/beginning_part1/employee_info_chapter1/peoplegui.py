@@ -7,7 +7,7 @@ import shelve
 shelvename = 'class-shelve'
 fieldnames = ('name', 'age', 'job', 'pay')
 
-def mainWidgets():
+def makeWidgets():
 	global entries
 	window = Tk()
 	window.title('People Shelve')
@@ -51,6 +51,6 @@ def updateRecord():
 
 
 db = shelve.open(shelvename)
-window = mainWidgets()
+window = makeWidgets()
 window.mainloop()
 db.close()
