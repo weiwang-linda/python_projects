@@ -7,6 +7,8 @@
 # The return value will already be quoted using the quote() function.
 # Usually use with urllib.parse and os modules
 
+# extension: For pdf file operations, reference https://pypi.python.org/pypi/python-poppler-qt5/
+
 import os
 from urllib import parse, request, error
 
