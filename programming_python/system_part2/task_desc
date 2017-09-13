@@ -1,1 +1,16 @@
 #Task description
+介绍python的系统编程工具. 主要开发系统工具、GUI界面、数据库、网络脚本和网站等。什么是系统编程：就是开发命令行工具，shell脚本，系统管理程序等.
+
+第二章：
+1. sys和os标准库模块，包含了python中大多数系统级接口。还有其他一些标准模块也属于这个领域：glob, socket, threading, _thread, queue, time, timeit, subprocess, multiprocessing, signal, select, shutil, tempfile.这个领域的第三方扩展包有：pySerial, Pexpect, Twisted等.这个领域的内建函数有：open.
+
+2. sys模块：负责导出与python解释器本身相关的组件。
+   os模块：包含与python所在底层操作系统相对应的变量和函数。
+
+
+	如何自己寻找相关细节:
+		1. dir(模块名) : 列出该模块expose出的所有属性的字符串名称
+		2. 查询内置模块的__doc__字符串 : sys.__doc__将会列出sys模块的文档字符串. 用print语句输出，不再有\n换行符。但不能完成页面滚动或分页显示.
+
+		3. help(模块名)，它是python标准库模块pydoc提供的接口之一。
+		4. 相关书籍和手册.
